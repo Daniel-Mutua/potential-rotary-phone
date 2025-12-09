@@ -34,11 +34,11 @@ void sendSMS() {
 
   delay(1000);
 
-  // Replace PHONE_NUMBER with the phone number you want to send the SMS to
+  // Replace +2547******** with the phone number you want to send the SMS to
   // Replace MESSAGE_CONTENT with the content of your message
   gsmSerial.print("AT+CMGS=\"+2547********\"\r"); //input repcepient phone number
   delay(1000);
-  gsmSerial.print("Hello GSM");
+  gsmSerial.print("Hello, this is a test!!");
   delay(100);
   gsmSerial.write(26); // ASCII code for Ctrl+Z
   delay(1000);
