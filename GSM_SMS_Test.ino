@@ -23,8 +23,8 @@ void loop() {
     Serial.write(c); // Print response from GSM module to serial monitor
   }
 
-  // Send SMS after 5 seconds (5000 milliseconds)
-  delay(5000);
+  // Send SMS after 60 seconds (60000 milliseconds)
+  delay(60000);
   sendSMS();
 }
 
@@ -36,7 +36,7 @@ void sendSMS() {
 
   // Replace PHONE_NUMBER with the phone number you want to send the SMS to
   // Replace MESSAGE_CONTENT with the content of your message
-  gsmSerial.print("AT+CMGS=\"0740390420\"\r");
+  gsmSerial.print("AT+CMGS=\"+2547********\"\r"); //input repcepient phone number
   delay(1000);
   gsmSerial.print("Hello GSM");
   delay(100);
